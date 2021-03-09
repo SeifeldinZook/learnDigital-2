@@ -1,0 +1,221 @@
+/**
+*	core player css
+*/
+html {
+  width: 100%;
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently*/
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 0;
+  width: 1280px;
+  height: 960px;
+  font-family: sans-serif;
+  transform-origin: left top;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: contain;
+  -ms-scroll-chaining: chained;
+  overflow-y: hidden;
+  background-color: #f0f0f0;
+}
+
+.yp-player {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: white;
+  touch-action: none; }
+
+.yp-player__header {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 75;
+  width: 100%;
+  height: 130px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.yp-player__header-title {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0 25px;
+  display: flex;
+  background-color: #f0f0f0;
+}
+
+.yp-player__header-badge {
+  margin-right: 30px;
+  position: relative; }
+
+.yp-player__header-badge-icon {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  z-index: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 70%; }
+
+.yp-player__main {
+  position: absolute;
+  top: 130px;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 831px;
+  background-color: #f0f0f0;
+}
+  .yp-player__main.yp-force-top {
+    z-index: 85;
+    top: 0;
+    height: 100%; }
+
+.yp-player__background {
+  position: absolute;
+  top: 130px;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: auto; }
+
+.yp-player__footer {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  z-index: 25;
+  width: 100%;
+  height: 130px;
+  background-color: #fff; }
+
+/**
+*	animation scss
+*/
+.yp-anim-300-eo {
+  transition: all 300ms ease-out; }
+
+.yp-anim-500-eo {
+  transition: all 500ms ease-out; }
+
+.yp-anim-1000-eo {
+  transition: all 1000ms ease-out; }
+
+.yp-fx-fade-in {
+  animation: fadein 0.5s ease-in-out;
+  transform-origin: center; }
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: scale(0.25); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+/**
+*	animation scss
+*/
+.yp-pos-abs {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 0; }
+
+.yp-pos-off-screen-left {
+  left: 100% !important; }
+
+.yp-pos-center-center {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%); }
+
+/**
+*	utlity scss
+*/
+.yp-u-clickable {
+  cursor: pointer; }
+
+.yp-u-disable {
+  pointer-events: none;
+  cursor: not-allowed; }
+
+.yp-u-visual-disable {
+  cursor: not-allowed; }
+
+.yp-u-f-50 {
+  opacity: 0.5; }
+
+.yp-u-show {
+  visibility: visible; }
+
+.yp-u-hide {
+  visibility: hidden; }
+
+.yp-bg-transparent {
+  background-color: transparent; }
+
+.yp-u-w-100pcnt {
+  width: 100%; }
+
+.yp-u-h-100pcnt {
+  height: 100%; }
+
+.yp-text-center {
+  text-align: center; }
+
+.yp-fx-multiply {
+  mix-blend-mode: multiply; }
+
+#logger {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  overflow: auto;
+  background-color: white; }
+
+.log-boolean,
+.log-undefined {
+  color: magenta; }
+
+.log-object,
+.log-string {
+  color: orange; }
+
+.log-number {
+  color: cyan; }

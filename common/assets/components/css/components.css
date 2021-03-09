@@ -1,0 +1,187 @@
+/**
+*
+*/
+.yp-modal {
+  position: absolute;
+  top: 13px;
+  right: auto;
+  bottom: auto;
+  left: calc(50% - (595px));
+  z-index: 100;
+  width: 1190px;
+  height: 675px;
+  background: #fff none no-repeat top left;
+  overflow: hidden;
+  transform: translateZ(0); }
+  .yp-modal--narrow {
+    width: 964px;
+    left: calc(50% - (482px));
+    overflow: visible;
+    top: 60px; }
+    .yp-modal--narrow .yp-btn-close {
+      top: -30px;
+      right: -30px; }
+  .yp-modal--poster {
+    width: 1272px;
+    height: 898px;
+    left: 0px;
+    overflow: hidden;
+    top: -100px; }
+    .yp-modal--poster .yp-btn-close {
+      top: -4px;
+      right: -6px; }
+  .yp-modal .yp-video {
+    max-width: 100%; }
+
+.yp-modal__background {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: -1; }
+
+/**
+*	Slideshow
+*/
+.yp-slideshow {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  transition: left 500ms ease-in-out; }
+
+.yp-slide {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%; }
+
+.yp-slide-media {
+  max-width: 100%;
+  max-height: 100%; }
+
+.yp-slideshow-arrow.yp-u-disable {
+  opacity: 0.3; }
+
+/**
+*	video player base (any look/feel overide should be within theme)
+*/
+.yp-video-player {
+  width: 800px;
+  height: 600px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 101; }
+  .yp-video-player video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    z-index: 100; }
+    .yp-video-player video.yp-media-playing {
+      z-index: 500; }
+
+/**
+*
+*/
+.yp-flip-card {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 100;
+  perspective: 1000px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  .yp-flip-card--flip .yp-flip-card__contents {
+    transform: rotateY(-180deg); }
+
+.yp-flip-card__contents {
+  transition: all 300ms ease-out;
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+  .yp-flip-card__contents img {
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    z-index: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .yp-flip-card__contents .yp-flip-card__front, .yp-flip-card__contents .yp-flip-card__back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .yp-flip-card__contents .yp-flip-card__front {
+    z-index: 2;
+    transform: rotateY(0deg); }
+  .yp-flip-card__contents .yp-flip-card__back {
+    transform: rotateY(180deg); }
+
+/**
+*	lightbox scss
+*/
+.yp-lightbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  transform: translateZ(0); }
+  .yp-lightbox:after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 1px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; }
+
+.yp-lightbox__content {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  z-index: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25); }
+
+.yp-btn-close.yp-lightbox__close-btn {
+  top: 0; }
+
+.yp-lightbox--hide {
+  visibility: hidden; }
+
+/**
+*	tracer scss
+*/

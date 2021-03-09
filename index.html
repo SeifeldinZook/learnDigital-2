@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+		<meta charset="utf-8">
+		
+		<title>Learn Digital 2</title>
+		
+		<!-- could be minified together -->
+		<link href="common/assets/core/css/core.css" rel="stylesheet" type="text/css">
+		<link href="common/assets/components/css/components.css" rel="stylesheet" type="text/css">
+		<link href="common/assets/theme/css/theme.css" rel="stylesheet" type="text/css">
+		<link href="common/assets/lang/css/en/lang.css" rel="stylesheet" type="text/css">
+	
+	</head>
+	<body>
+		
+	<div class="yp-player" id="Player"></div>
+	
+	<!-- View, Player and Activity classes could be minified together -->
+	<script src="common/js/View.js"></script>
+	<script src="common/js/Player.js"></script>
+	<script src="common/js/Activity.js"></script>
+	<script src="common/js/ListenAndFind.js"></script>
+	<script src="common/js/ListenAndFindRandom.js"></script>
+	<script src="common/js/ImageHighlight.js"></script>
+
+	<script type="text/javascript">
+		var jsonTag = document.createElement('script');
+                var activityType = 'image-highlight';
+		
+		// hash will be activity pointer e.g. #act1, #act2
+		// search will be data e.g. ?data=learn-and-find-type-1
+		jsonTag.setAttribute('src','json/'+activityType+'.js');
+		document.head.appendChild(jsonTag);
+		// on page load 
+		window.addEventListener('load', function(){
+			var plyr = new Player(jsonData);
+			plyr.init();
+		});	
+	</script>
+	
+	</body>
+</html>
