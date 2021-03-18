@@ -337,6 +337,7 @@ Player.prototype.layout = function(){
                 else
                 {
                     var bgImage = "common/assets/theme/imgs/bg.jpg";
+                    var bgImage = "";
                     img = document.createElement('img');
                     img.setAttribute('src', bgImage);
                     img.classList.add('yp-player__background');
